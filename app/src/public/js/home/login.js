@@ -12,4 +12,13 @@ const id  = document.querySelector("#id"), // 질의 선택지 #은 id의 id를 
         password: password.value,
       };
       console.log(req);
+      console.log(JSON.stringify(req));
+
+     fetch("/login", {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(req) 
+     });
  }
